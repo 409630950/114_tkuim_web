@@ -7,34 +7,27 @@
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons (社群/圖示用) -->
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- 自訂樣式：平滑捲動、卡片 hover 效果、主色系 -->
   <style>
     html { scroll-behavior: smooth; }
-    :root { --brand-color: var(--bs-primary); }
-    /* 卡片 hover 放大＋陰影 */
     .card.hoverable { transition: transform .2s ease, box-shadow .2s ease; }
     .card.hoverable:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.15); }
-    /* 作品卡片的圖片維持等比 */
     .portfolio-thumb { aspect-ratio: 4/3; object-fit: cover; }
-    /* 區塊間距預設 */
-    section { scroll-margin-top: 80px; } /* sticky navbar 停靠空間 */
+    section { scroll-margin-top: 80px; }
   </style>
 </head>
 <body>
 
-  <!-- 導航列 Navbar（含品牌、4 個連結、小螢幕漢堡） -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">Weijay</a>
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="切換導覽">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
@@ -46,77 +39,73 @@
     </div>
   </nav>
 
-  <!-- 顶部提示 Alert（進階：Alert 元件） -->
+  <!-- Alert -->
   <div class="alert alert-info text-center mb-0">
     <i class="bi bi-stars me-1"></i> 歡迎來到我的作品集！本頁使用 Bootstrap 5 響應式設計。
   </div>
 
   <main id="home">
-    <!-- Hero Section（首頁區塊）：container、display-*、2 按鈕、py-5 -->
+    <!-- Hero -->
     <section class="bg-light py-5" id="hero">
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-lg-6">
             <h1 class="display-4 fw-bold mb-3">嗨，我是 Weijay</h1>
-            <p class="lead text-muted mb-4">
-              淡江大學資管系學生。這裡收藏了我近期的學習與作品。
-            </p>
+            <p class="lead text-muted mb-4">淡江大學資管系學生。這裡收藏了我近期的學習與作品。</p>
             <div class="d-flex gap-3">
               <a class="btn btn-primary btn-lg" href="#portfolio"><i class="bi bi-grid-3x3-gap-fill me-1"></i> 看作品</a>
               <a class="btn btn-outline-primary btn-lg" href="#contact"><i class="bi bi-envelope-paper-heart me-1"></i> 聯絡我</a>
             </div>
           </div>
           <div class="col-lg-6 text-center">
-            <img src="炭吉&姆姆.png" alt="Hero"
-                 class="img-fluid rounded shadow-sm">
+            <!-- 建議把圖放 images/hero_cats.png -->
+            <img src="炭吉&姆姆.png" alt="Hero" class="img-fluid rounded shadow-sm">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section（關於我）：row/col 兩欄、左圖右文、文字工具類別≥3 -->
-<section id="about" class="py-5 bg-white">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-md-5 text-center">
-        <img src="images/hero_cats.png" alt="炭吉與姆姆"
-             class="img-fluid rounded-circle shadow-sm">
-      </div>
-      <div class="col-md-7">
-        <h2 class="fw-bold mb-3">關於我</h2>
-        <p class="fs-5 text-muted">
-          我是 <span class="fw-semibold">Weijay</span>，今年 <span class="fw-semibold">23 歲</span>，
-          一個在飲料店上班的苦命社畜 🧋。<br>
-          正在努力耗盡精氣神修完人生最後的 <span class="text-primary fw-semibold">3 學分</span>，
-          只為了能順利畢業 🎓。
-        </p>
-        <p class="fs-5 text-muted mb-3">
-          除了打工與課業，我還要努力賺錢養兩隻心愛的貓咪——
-          <span class="text-primary fw-semibold">炭吉</span>（黑貓米克斯）和
-          <span class="text-primary fw-semibold">姆姆</span>（白色曼赤肯）。<br>
-          雖然每天都被現實折磨，但牠們的可愛是我撐下去的動力 🐾。
-        </p>
-        <div class="row g-3">
-          <div class="col-sm-6">
-            <div class="d-flex align-items-center">
-              <i class="fs-4 me-2">🍟</i>
-              <span class="fw-semibold">社會底層炸薯條專員</span>
-            </div>
+    <!-- About -->
+    <section id="about" class="py-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-md-5 text-center">
+            <img src="weijay.png" alt="Weijay" class="img-fluid rounded-circle shadow-sm">
           </div>
-          <div class="col-sm-6">
-  <div class="d-flex align-items-center">
-    <i class="fs-4 me-2">🐟</i>
-    <span class="fw-semibold">綠蓋泡(摸)茶(魚)大師</span>
-  </div>
-</div>
+          <div class="col-md-7">
+            <h2 class="fw-bold mb-3">關於我</h2>
+            <p class="fs-5 text-muted">
+              我是 <span class="fw-semibold">Weijay</span>，今年 <span class="fw-semibold">23 歲</span>，
+              一個在飲料店上班的苦命社畜 🧋。<br>
+              正在努力耗盡精氣神修完人生最後的 <span class="text-primary fw-semibold">3 學分</span>，
+              只為了能順利畢業 🎓。
+            </p>
+            <p class="fs-5 text-muted mb-3">
+              除了打工與課業，我還要努力賺錢養兩隻心愛的貓咪——
+              <span class="text-primary fw-semibold">炭吉</span>（黑貓米克斯）和
+              <span class="text-primary fw-semibold">姆姆</span>（白色曼赤肯）。<br>
+              雖然每天都被現實折磨，但牠們的可愛是我撐下去的動力 🐾。
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <i class="fs-4 me-2">🍟</i>
+                  <span class="fw-semibold">社會底層炸薯條專員</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <i class="fs-4 me-2">🐟</i>
+                  <span class="fw-semibold">綠蓋泡(摸)茶(魚)大師</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-    <!-- Skills Section（技能）：row + col-md-4，card，含圖示/標題/描述 + 進度條 + Badge -->
+    <!-- Skills -->
     <section id="skills" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center fw-bold mb-4">技能展示</h2>
@@ -128,70 +117,70 @@
             <div class="card h-100 hoverable">
               <div class="card-body">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="bi bi-filetype-html fs-1 text-primary me-2"></i>
-                  <h5 class="card-title mb-0">HTML &amp; CSS <span class="badge text-bg-primary ms-1">熟悉</span></h5>
+                  <i class="bi bi-shield-check fs-1 text-primary me-2"></i>
+                  <h5 class="card-title mb-0">鏟屎技能 <span class="badge text-bg-primary ms-1">精通</span></h5>
                 </div>
                 <p class="card-text text-muted">
-                  語意化標籤、排版、版面切版與 Bootstrap 公用類別的靈活應用。
+                  熟悉各類貓砂類型與清理流程，能在半夢半醒中準確鏟屎、不外漏。<br>
+                  經驗值滿點，榮獲貓主頒發「優秀鏟屎官」徽章。
                 </p>
                 <div class="mb-1 small text-muted">掌握度</div>
-                <div class="progress" role="progressbar" aria-label="HTML/CSS">
+                <div class="progress" role="progressbar" aria-label="鏟屎技能">
                   <div class="progress-bar bg-primary" style="width: 85%">85%</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Skill 2 -->
-          <div class="col-md-4">
-            <div class="card h-100 hoverable">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <i class="bi bi-braces fs-1 text-primary me-2"></i>
-                  <h5 class="card-title mb-0">JavaScript <span class="badge text-bg-primary ms-1">進階中</span></h5>
-                </div>
-                <p class="card-text text-muted">
-                  DOM 操作、事件處理與基本互動；持續強化模組化與最佳實踐。
-                </p>
-                <div class="mb-1 small text-muted">掌握度</div>
-                <div class="progress" role="progressbar" aria-label="JavaScript">
-                  <div class="progress-bar bg-primary" style="width: 70%">70%</div>
-                </div>
-              </div>
-            </div>
-          </div>
+       <!-- Skill 2 -->
+<div class="col-md-4">
+  <div class="card h-100 hoverable">
+    <div class="card-body">
+      <div class="d-flex align-items-center mb-3">
+        <i class="bi bi-phone fs-1 text-primary me-2"></i>
+        <h5 class="card-title mb-0">上班滑手機技巧 <span class="badge text-bg-primary ms-1">進階中</span></h5>
+      </div>
+      <p class="card-text text-muted">
+        熟練於避開監視鏡頭與店長視線，精通單手搖飲料＋滑Ingtagram的流暢切換動作。<br>
+        偶爾還能在 LINE 群裡即時回覆朋友訊息，保持工作與娛樂完美平衡。
+      </p>
+      <div class="mb-1 small text-muted">掌握度</div>
+      <div class="progress" role="progressbar" aria-label="上班滑手機技巧">
+        <div class="progress-bar bg-primary" style="width: 75%">75%</div>
+      </div>
+    </div>
+  </div>
+</div>
 
           <!-- Skill 3 -->
-          <div class="col-md-4">
-            <div class="card h-100 hoverable">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <i class="bi bi-database fs-1 text-primary me-2"></i>
-                  <h5 class="card-title mb-0">SQL / 資料庫 <span class="badge text-bg-primary ms-1">熟悉</span></h5>
-                </div>
-                <p class="card-text text-muted">
-                  資料表設計、關聯、索引與查詢優化；可用 SSMS 進行完整操作。
-                </p>
-                <div class="mb-1 small text-muted">掌握度</div>
-                <div class="progress" role="progressbar" aria-label="SQL">
-                  <div class="progress-bar bg-primary" style="width: 80%">80%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /row -->
+<div class="col-md-4">
+  <div class="card h-100 hoverable">
+    <div class="card-body">
+      <div class="d-flex align-items-center mb-3">
+        <i class="bi bi-exclamation-triangle fs-1 text-primary me-2"></i>
+        <h5 class="card-title mb-0">貓奴危機處理術 <span class="badge text-bg-primary ms-1">熟悉</span></h5>
       </div>
-    </section>
+      <p class="card-text text-muted">
+        精通玻璃打破、食物打翻、半夜狂奔等各類緊急事件的應對。<br>
+        能在 5 秒內從夢中清醒，冷靜處理一切喵生意外。<br>
+        防止他們動不動給我生一個5000塊的小病。
+      </p>
+      <div class="mb-1 small text-muted">掌握度</div>
+      <div class="progress" role="progressbar" aria-label="貓奴危機處理術">
+        <div class="progress-bar bg-primary" style="width: 80%">80%</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Portfolio Section（作品集）：row + col-lg-4 col-md-6，至少 6 個卡片 -->
+    <!-- Portfolio -->
     <section id="portfolio" class="py-5 bg-white">
       <div class="container">
         <h2 class="text-center fw-bold mb-4">作品集</h2>
         <p class="text-center text-muted mb-5">以下是六個示例作品卡（可替換成你的實作）</p>
 
         <div class="row g-4">
-          <!-- 6 個作品項目 -->
-          <!-- Item 1 -->
+          <!-- Items 1-6 -->
           <div class="col-lg-4 col-md-6">
             <div class="card h-100 hoverable">
               <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 1">
@@ -202,7 +191,7 @@
               </div>
             </div>
           </div>
-          <!-- Item 2 -->
+
           <div class="col-lg-4 col-md-6">
             <div class="card h-100 hoverable">
               <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 2">
@@ -213,7 +202,7 @@
               </div>
             </div>
           </div>
-          <!-- Item 3 -->
+
           <div class="col-lg-4 col-md-6">
             <div class="card h-100 hoverable">
               <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 3">
@@ -224,7 +213,7 @@
               </div>
             </div>
           </div>
-          <!-- Item 4 -->
+
           <div class="col-lg-4 col-md-6">
             <div class="card h-100 hoverable">
               <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 4">
@@ -235,7 +224,7 @@
               </div>
             </div>
           </div>
-          <!-- Item 5 -->
+
           <div class="col-lg-4 col-md-6">
             <div class="card h-100 hoverable">
               <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 5">
@@ -246,7 +235,7 @@
               </div>
             </div>
           </div>
-          <!-- Item 6 -->
+
           <div class="col-lg-4 col-md-6">
             <div class="card h-100 hoverable">
               <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 6">
@@ -261,7 +250,7 @@
       </div>
     </section>
 
-    <!-- Contact Section（聯絡表單）：姓名、Email、主旨、訊息；form-control、form-label、mb-3 -->
+    <!-- Contact -->
     <section id="contact" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center fw-bold mb-4">聯絡我</h2>
@@ -292,7 +281,7 @@
     </section>
   </main>
 
-  <!-- Footer：深色背景、3 個社群連結、版權、置中 -->
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <div class="mb-3 d-flex justify-content-center gap-3 fs-4">
@@ -304,7 +293,6 @@
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS（含 Popper） -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
