@@ -122,7 +122,8 @@
                 </div>
                 <p class="card-text text-muted">
                   熟悉各類貓砂類型與清理流程，能在半夢半醒中準確鏟屎、不外漏。<br>
-                  經驗值滿點，榮獲貓主頒發「優秀鏟屎官」徽章。
+                  經驗值滿點，榮獲貓主頒發「優秀鏟屎官」徽章。<br>
+                  (雖然姆姆有時候很愛亂拉屎)。
                 </p>
                 <div class="mb-1 small text-muted">掌握度</div>
                 <div class="progress" role="progressbar" aria-label="鏟屎技能">
@@ -174,83 +175,123 @@
 </div>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="py-5 bg-white">
-      <div class="container">
-        <h2 class="text-center fw-bold mb-4">作品集</h2>
-        <p class="text-center text-muted mb-5">以下是六個示例作品卡（可替換成你的實作）</p>
+   <section id="portfolio" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">作品集</h2>
+    <p class="text-center text-muted mb-5">以下是六個示例作品卡</p>
 
-        <div class="row g-4">
-          <!-- Items 1-6 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card h-100 hoverable">
-              <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 1">
-              <div class="card-body">
-                <h5 class="card-title">專案一：RWD 首頁</h5>
-                <p class="card-text text-muted">以 Bootstrap Grid 建立響應式首頁排版。</p>
-                <a href="#" class="btn btn-sm btn-primary">查看詳情</a>
-              </div>
-            </div>
-          </div>
+    <style>
+      .thumb-box {
+        height: 260px;
+        background: #f8f9fa;
+        border-radius: .5rem .5rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .thumb-img {
+        width: 100%;
+        height: 100%;
+      }
+      .thumb-img.contain { object-fit: contain; }
+      .thumb-img.cover { object-fit: cover; }
 
-          <div class="col-lg-4 col-md-6">
-            <div class="card h-100 hoverable">
-              <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 2">
-              <div class="card-body">
-                <h5 class="card-title">專案二：表單介面</h5>
-                <p class="card-text text-muted">使用表單元件與驗證樣式設計註冊頁。</p>
-                <a href="#" class="btn btn-sm btn-outline-primary">查看詳情</a>
-              </div>
-            </div>
-          </div>
+      .card.h-100 .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+      .card.h-100 .card-body .btn {
+        margin-top: auto;
+      }
+    </style>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="card h-100 hoverable">
-              <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 3">
-              <div class="card-body">
-                <h5 class="card-title">專案三：卡片佈局</h5>
-                <p class="card-text text-muted">多欄卡片與 hover 效果的視覺呈現。</p>
-                <a href="#" class="btn btn-sm btn-primary">查看詳情</a>
-              </div>
-            </div>
-          </div>
+    <div class="row g-4">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="card h-100 hoverable">
-              <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 4">
-              <div class="card-body">
-                <h5 class="card-title">專案四：導覽列</h5>
-                <p class="card-text text-muted">支援漢堡選單與黏頂的 Navbar。</p>
-                <a href="#" class="btn btn-sm btn-outline-primary">查看詳情</a>
-              </div>
-            </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 hoverable">
+          <div class="thumb-box">
+            <img class="thumb-img contain" src="mumu.jpg" alt="姆姆梗圖">
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="card h-100 hoverable">
-              <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 5">
-              <div class="card-body">
-                <h5 class="card-title">專案五：色彩主題</h5>
-                <p class="card-text text-muted">以 primary 主色打造一致性風格。</p>
-                <a href="#" class="btn btn-sm btn-primary">查看詳情</a>
-              </div>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">專案一：把姆姆做成梗圖</h5>
+            <p class="card-text text-muted">好險沒有胖到舔不到屁股 🐾</p>
+            <a href="mumu.jpg" target="_blank" class="btn btn-sm btn-primary">查看詳情</a>
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="card h-100 hoverable">
-              <img class="card-img-top portfolio-thumb" src="https://via.placeholder.com/800x600" alt="專案 6">
-              <div class="card-body">
-                <h5 class="card-title">專案六：元件整合</h5>
-                <p class="card-text text-muted">Alert、Badge、Progress、Card 綜合應用。</p>
-                <a href="#" class="btn btn-sm btn-outline-primary">查看詳情</a>
-              </div>
-            </div>
-          </div>
-        </div><!-- /row -->
+        </div>
       </div>
-    </section>
 
-    <!-- Contact -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 hoverable">
+          <div class="thumb-box">
+            <img class="thumb-img contain" src="tanji.jpg" alt="炭吉漩渦座">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">專案二：把炭吉做成漪窩座</h5>
+            <p class="card-text text-muted">炭吉術式展開 🌀</p>
+            <a href="tanji.jpg" target="_blank" class="btn btn-sm btn-outline-primary">查看詳情</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 hoverable">
+          <div class="thumb-box">
+            <img class="thumb-img cover" src="tanji2.jpg" alt="專案三：吸血小貓">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">專案三：炭吉化身吸血小貓</h5>
+            <p class="card-text text-muted">吸血小貓的甦醒時刻。</p>
+            <a href="tanji2.jpg" target="_blank" class="btn btn-sm btn-primary">查看詳情</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 hoverable">
+          <div class="thumb-box">
+            <img class="thumb-img cover" src="cake.jpg" alt="開心果生乳酪">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">專案四：上班偷懶做的開心果生乳酪</h5>
+            <p class="card-text text-muted">誰想得到一罐 200 克的開心果醬要 959 元。</p>
+            <a href="cake.jpg" target="_blank" class="btn btn-sm btn-outline-primary">查看詳情</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 hoverable">
+          <div class="thumb-box">
+            <img class="thumb-img cover" src="sunset.jpg" alt="夕陽">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">專案五：上班上一上突然覺得夕陽很漂亮跑出去拍</h5>
+            <p class="card-text text-muted">真不愧是台灣 8 景之一。</p>
+            <a href="sunset.jpg" target="_blank" class="btn btn-sm btn-primary">查看詳情</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 hoverable">
+          <div class="thumb-box">
+            <img class="thumb-img cover" src="catcup.jpg" alt="杯子貓畫作">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">專案六：無聊在杯子上畫的貓貓</h5>
+            <p class="card-text text-muted">畫的又醜又可愛哈哈。</p>
+            <a href="catcup.jpg" target="_blank" class="btn btn-sm btn-outline-primary">查看詳情</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
     <section id="contact" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center fw-bold mb-4">聯絡我</h2>
