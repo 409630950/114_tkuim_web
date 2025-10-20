@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 函式與 BMI 判斷練習</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+  <h2>函式與 BMI 判斷練習</h2>
+  <p>請輸入身高（公分）與體重（公斤），系統將計算 BMI 並判斷是否理想。</p>
+
+  <script>
+    // 計算 BMI 的函式
+    function calcBMI(height, weight) {
+      return weight / Math.pow(height / 100, 2);
+    }
+
+    // 判斷是否為理想範圍的函式
+    function isIdeal(bmi) {
+      // 回傳布林值 true / false
+      return bmi >= 18.5 && bmi <= 24;
+    }
+
+    // 使用者輸入
+    var h = prompt("請輸入身高（公分）：");
+    var w = prompt("請輸入體重（公斤）：");
+
+    // 轉成數字
+    h = parseFloat(h);
+    w = parseFloat(w);
+
+    // 計算 BMI
+    var bmi = calcBMI(h, w);
+
+    // 判斷結果
+    var result = isIdeal(bmi);
+
+    // 顯示結果
+    alert("你的 BMI 為：" + bmi.toFixed(2) + "\n是否為理想範圍：" + result);
+    console.log("BMI =", bmi.toFixed(2), "理想範圍 =", result);
+  </script>

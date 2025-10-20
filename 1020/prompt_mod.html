@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 餘數運算練習</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+
+  <h2>餘數運算與轉型練習</h2>
+  <p>請打開 Console (F12 → Console) 或看提示視窗觀察結果。</p>
+
+  <script>
+    // 使用者輸入兩個數字（會是字串）
+    var num1 = prompt("請輸入第一個整數：");
+    var num2 = prompt("請輸入第二個整數：");
+
+    // 轉型成數字
+    var a = parseInt(num1);
+    var b = parseInt(num2);
+
+    // 基本運算
+    var sum = a + b;
+    var remainder = a % b; // 餘數運算
+
+    // 顯示結果
+    console.log("a =", a, "b =", b);
+    console.log("a + b =", sum);
+    console.log("a % b =", remainder);
+
+    // 彈出提示結果
+    alert("a + b = " + sum + "\na % b (餘數) = " + remainder);
+
+    // 額外：== 與 === 差異示範
+    console.log("'5' == 5 ?", ('5' == 5));   // true，因為只比數值
+    console.log("'5' === 5 ?", ('5' === 5)); // false，因為型態不同
+  </script>
+
+  <hr>
+  <h3>💡 小結</h3>
+  <ul>
+    <li><code>prompt()</code> 回傳字串，做運算前要轉成數字。</li>
+    <li><code>==</code> 比較數值是否相等；<code>===</code> 會同時比較「型態」與「數值」。</li>
+    <li><code>console.log()</code> 可以幫助觀察過程與除錯。</li>
+    <li><code>%</code> 是「餘數」運算子，常用來判斷是否整除，例如：<br>
+      <code>if (num % 2 === 0)</code> → 判斷是不是偶數。</li>
+  </ul>
+
+</body>
+</html>

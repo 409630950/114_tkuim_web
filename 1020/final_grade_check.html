@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 綜合練習：五科成績與不及格警示</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+  <h2>綜合練習：計算平均與等第</h2>
+  <p>請輸入五科成績，系統會計算平均與等第，若有不及格科目會加註提示。</p>
+
+  <script>
+    // ✅ 將輸入字串轉成數字的函式
+    function toNumber(str) {
+      return parseFloat(str);
+    }
+
+    // ✅ 根據平均回傳等第
+    function getGrade(avg) {
+      if (avg >= 90) return "A";
+      else if (avg >= 80) return "B";
+      else if (avg >= 70) return "C";
+      else if (avg >= 60) return "D";
+      else return "F";
+    }
+
+    // ✅ 主程式開始
+    var scores = []; // 儲存五科成績
+
+    // 讀入五科分數
+    for (var i = 1; i <= 5; i++) {
+      var s = prompt("請輸入第 " + i + " 科成績：");
+      scores.push(toNumber(s));
+    }
+
+    // 檢查是否有不及格科目
+    var hasFail = false;
+    for (var i = 0; i < scores.length; i++) {
+      if (scores[i] < 60) {
+        hasFail = true;
+        break; // 有一科不及格就可以結束檢查
+      }
+    }
+
+    // 計算平均
+    var total = 0;
+    for (var i = 0; i < scores.length; i++) {
+      total += scores[i];
+    }
+    var avg = total / scores.length;
+
+    // 取得等第
+    var grade = getGrade(avg);
+
+    // 組合結果文字
+    var msg = "五科成績：" + scores.join(", ") +
+              "\n平均分數：" + avg.toFixed(2) +
+              "\n等第：" + grade;
+
+    if (hasFail) {
+      msg += "\n⚠️ 有不及格科目！";
+    }
+
+    // 顯示結果
+    alert(msg);
+    console.log(msg);
+  </script>

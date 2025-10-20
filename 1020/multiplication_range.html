@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 乘法範圍練習</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+  <h2>巢狀迴圈練習：乘法範圍</h2>
+  <p>請輸入要顯示的乘法範圍，例如：2 到 5。</p>
+
+  <script>
+    // 使用者輸入起始與結束數字
+    var start = prompt("請輸入乘法起始數（例如 2）：");
+    var end = prompt("請輸入乘法結束數（例如 5）：");
+
+    // 轉成整數
+    start = parseInt(start);
+    end = parseInt(end);
+
+    // 顯示標題
+    console.log("顯示 " + start + " 到 " + end + " 的乘法表：");
+
+    // 巢狀迴圈輸出乘法表
+    for (var i = start; i <= end; i++) {
+      console.log("=== " + i + " 的乘法表 ===");
+      for (var j = 1; j <= 9; j++) {
+        console.log(i + " x " + j + " = " + (i * j));
+      }
+    }
+
+    // 提示完成
+    alert("乘法表已在 Console 顯示，請開啟 F12 → Console 查看！");
+  </script>
+
+  <hr>
+  <h3>💡 小結重點</h3>
+  <ul>
+    <li><code>for</code> 搭配計數器最直覺，適合重複次數明確的情境。</li>
+    <li>巢狀迴圈可處理「二維資料」或「表格式」的結構（如乘法表）。</li>
+    <li><code>break</code> 可中止整個迴圈，<code>continue</code> 可跳過本次執行。</li>
+  </ul>
+
+</body>
+</html>

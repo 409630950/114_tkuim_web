@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 陣列最大最小值練習</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+  <h2>陣列最大最小值練習</h2>
+  <p>請輸入一串數字（以逗號分隔），例如：10,5,20,8</p>
+
+  <script>
+    // 讀取輸入字串
+    var input = prompt("請輸入一串數字（用逗號分隔）:");
+
+    // 用 split(',') 切成陣列
+    var arr = input.split(',');
+
+    // 準備變數存最大與最小值
+    var max = Number.MIN_VALUE;
+    var min = Number.MAX_VALUE;
+
+    // 走訪陣列
+    for (var i = 0; i < arr.length; i++) {
+      var num = parseFloat(arr[i]);
+
+      // 檢查是否為有效數字
+      if (isNaN(num)) {
+        console.log("忽略無效輸入：" + arr[i]);
+        continue;
+      }
+
+      // 更新最大與最小值
+      if (num > max) max = num;
+      if (num < min) min = num;
+    }
+
+    // 輸出結果
+    alert("最大值：" + max + "\n最小值：" + min);
+    console.log("最大值：" + max + "，最小值：" + min);
+  </script>
+
+  <hr>
+  <h3>💡 小結重點</h3>
+  <ul>
+    <li><code>split(',')</code> 可將字串以逗號切成陣列。</li>
+    <li>走訪陣列常見寫法：<code>for (var i = 0; i &lt; arr.length; i++)</code></li>
+    <li><code>isNaN()</code> 可用來過濾掉非數字輸入。</li>
+  </ul>
+
+</body>
+</html>

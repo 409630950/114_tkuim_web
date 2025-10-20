@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 變數與轉型練習</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+  <h2>變數與轉型練習</h2>
+  <p>請打開 Console (F12 → Console) 或看網頁提示訊息。</p>
+
+  <script>
+    // 提示使用者輸入兩個數字（用字串形式輸入）
+    var num1 = prompt("請輸入第一個數字：");
+    var num2 = prompt("請輸入第二個數字：");
+
+    // 將字串轉成數字
+    var a = parseFloat(num1);
+    var b = parseFloat(num2);
+
+    // 計算總和
+    var sum = a + b;
+
+    // 在 Console 顯示結果
+    console.log("兩數相加的結果是：" + sum);
+
+    // 也用 alert 顯示
+    alert("兩數相加的結果是：" + sum);
+  </script>
+</body>
+</html>

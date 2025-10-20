@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 條件判斷與等第練習</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+  <h2>條件判斷：if / else 與 switch</h2>
+  <p>請輸入分數（0～100），程式會輸出對應等第：</p>
+
+  <script>
+    // 使用者輸入分數
+    var score = prompt("請輸入你的分數（0～100）：");
+    var grade;
+
+    // 轉成數字
+    score = parseInt(score);
+
+    // 方法一：if / else 判斷
+    if (score >= 90) {
+      grade = "A";
+    } else if (score >= 80) {
+      grade = "B";
+    } else if (score >= 70) {
+      grade = "C";
+    } else if (score >= 60) {
+      grade = "D";
+    } else {
+      grade = "F";
+    }
+
+    // 顯示結果
+    console.log("使用 if / else 判斷，等第為：" + grade);
+
+    // 方法二：switch 判斷（取整數的十位數）
+    switch (Math.floor(score / 10)) {
+      case 10:
+      case 9:
+        grade = "A";
+        break;
+      case 8:
+        grade = "B";
+        break;
+      case 7:
+        grade = "C";
+        break;
+      case 6:
+        grade = "D";
+        break;
+      default:
+        grade = "F";
+    }
+
+    // 輸出結果
+    alert("你的分數是 " + score + " 分，等第為：" + grade);
+    console.log("使用 switch 判斷，等第為：" + grade);
+  </script>
+
+  <hr>
+  <h3>💡 小結重點</h3>
+  <ul>
+    <li><code>if / else</code> 適合一般邏輯與範圍條件。</li>
+    <li><code>switch</code> 適合「固定選項分類」，例如分數區段、星期幾。</li>
+    <li><code>break</code> 可避免 <strong>落入（fall-through）</strong> 下一個 case。</li>
+  </ul>
+
+</body>
+</html>
