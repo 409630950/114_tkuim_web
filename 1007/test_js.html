@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Console 測試</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h1>JavaScript 練習示範</h1>
+  <p id="time"></p>
+  <p id="sum"></p>
+
+  <script>
+    // 1️⃣ 顯示當前網頁的標題
+    console.log(document.title);
+
+    // 2️⃣ 改變背景顏色
+    document.body.style.backgroundColor = "lightblue";
+
+    // 3️⃣ 顯示段落元素
+    console.log(document.getElementsByTagName("p"));
+
+    // 4️⃣ 顯示目前時間
+    const now = new Date();
+    document.getElementById("time").textContent = "現在時間：" + now;
+
+    // 5️⃣ 計算 1 到 100 的總和
+    let sum = 0;
+    for (let i = 1; i <= 100; i++) {
+      sum += i;
+    }
+    document.getElementById("sum").textContent = "1 加到 100 的總和是：" + sum;
+    console.log(sum);
+  </script>
+</body>
+</html>

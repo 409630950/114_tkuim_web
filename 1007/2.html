@@ -1,0 +1,29 @@
+// 1. 選取按鈕元素
+let button = document.getElementById("myButton");
+console.log(button);  // 查看是否成功選取
+
+// 2. 選取訊息區域
+let message = document.getElementById("message");
+console.log(message);  // 查看是否成功選取
+
+// 3. 改變訊息文字
+message.textContent = "內容已經被 JavaScript 改變了！";
+
+// 4. 改變訊息樣式
+message.style.color = "red";
+message.style.fontSize = "24px";
+
+// 5. 選取輸入框
+let nameInput = document.getElementById("nameInput");
+
+// 6. 查看輸入框的值（先在網頁上的輸入框輸入你的名字，再執行這行）
+nameInput.value;
+
+// 7. 改變段落文字
+document.getElementById("demo").innerHTML = "<strong>文字已更新！</strong>";
+
+// 8. 建立新元素並加到網頁中
+let newPara = document.createElement("p");
+newPara.textContent = "這是用 JavaScript 新增的段落";
+newPara.style.color = "blue";
+document.body.appendChild(newPara);
