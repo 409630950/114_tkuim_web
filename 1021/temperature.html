@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>溫度轉換器（攝氏 ↔ 華氏）</title>
+  <style>
+    body { font-family: system-ui, Segoe UI, Roboto, sans-serif; padding: 24px; line-height: 1.6; }
+    button { padding: 10px 16px; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; }
+    pre { background: #f7f7f7; padding: 12px; border-radius: 8px; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>溫度轉換器（攝氏 ↔ 華氏）</h1>
+  <p>使用 <code>prompt()</code> 讀入溫度與單位（C 或 F），以 <code>alert()</code> 與頁面 <code>&lt;pre&gt;</code> 顯示結果。</p>
+
+  <button onclick="convertTemp()">開始轉換</button>
+  <pre id="result">（結果會顯示在這裡）</pre>
+
+  <script>
+    function convertTemp() {
+      let input = prompt("請輸入溫度值（可含小數）：");
+      if (input === null) {
+        alert("已取消操作。");
+        return;
+      }
+      let value = Number(input);
+      if (isNaN(value)) {
+        alert("❌ 請輸入有效的數字！");
+        document.getElementById("result").textContent = "輸入錯誤：不是數字。";
+        return;
+      }
+
+      let unit = prompt("請輸入單位（C 或 F）：");
+      if (unit === null) {
+        alert("已取消操作。");
+        return;
+      }
+      unit = unit.trim().toUpperCase();
+
+      let output = "";
+      if (unit === "C") {
+        let F = value * 9 / 5 + 32;
+        alert(`${value} °C = ${F.toFixed(2)} °F`);
+        output = `${value} °C 轉換為華氏：${F.toFixed(2)} °F`;
+      } else if (unit === "F") {
+        let C = (value - 32) * 5 / 9;
+        alert(`${value} °F = ${C.toFixed(2)} °C`);
+        output = `${value} °F 轉換為攝氏：${C.toFixed(2)} °C`;
+      } else {
+        alert("❌ 單位只能輸入 C 或 F！");
+        output = "輸入錯誤：單位需為 C 或 F。";
+      }
+
+      document.getElementById("result").textContent = output;
+    }
+  </script>
+</body>
+</html>

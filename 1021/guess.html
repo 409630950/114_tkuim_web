@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>猜數字遊戲（1~100）</title>
+  <style>
+    body { font-family: system-ui, Segoe UI, Roboto, Noto Sans, sans-serif; padding: 24px; line-height: 1.6; }
+    button { padding: 10px 16px; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; }
+    pre { background: #f7f7f7; padding: 12px; border-radius: 8px; margin-top: 16px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>猜數字遊戲（1~100）</h1>
+  <p>電腦會隨機產生 1–100 的整數，使用 <code>prompt()</code> 輸入數字，提示「再大一點 / 再小一點」，猜中後顯示猜的次數。</p>
+
+  <button onclick="startGame()">開始遊戲</button>
+  <button onclick="newSecret()">換一題</button>
+  <pre id="output">（遊戲結果會顯示在這裡）</pre>
+
+  <script>
+    let secret = Math.floor(Math.random() * 100) + 1;
+    function newSecret() {
+      secret = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("output").textContent = "✅ 已產生新的神秘數字（1~100）";
+    }
+
+    function startGame() {
+      let count = 0;
+      let history = [];
+
+      while (true) {
+        let input = prompt("請輸入你猜的數字（1~100）：");
+        if (input === null) {
+          alert("遊戲已結束。");
+          break;
+        }
+
+        let guess = Number(input);
+        if (!Number.isInteger(guess) || guess < 1 || guess > 100) {
+          alert("❌ 請輸入 1~100 的整數！");
+          continue;
+        }
+
+        count++;
+        history.push(guess);
+
+        if (guess === secret) {
+          alert(`🎉 恭喜答對！你總共猜了 ${count} 次。`);
+          document.getElementById("output").textContent =
+            `✅ 猜中！答案是 ${secret}\n共猜了 ${count} 次。\n歷程：${history.join(", ")}`;延伸練習：
+
+練習巢狀條件與多重迴圈（例如：多重選單、矩陣運算）。
+嘗試把重複邏輯拆成多個函式。
+          newSecret();
+          break;
+        } else if (guess < secret) {
+          alert("再大一點！");
+        } else {
+          alert("再小一點！");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
