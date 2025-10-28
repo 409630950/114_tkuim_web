@@ -1,0 +1,38 @@
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+
+.tag {
+  user-select: none;
+  border-radius: 999px;
+  line-height: 1.2;
+  padding: .5rem .9rem;
+}
+.tag.active {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+
+.strength {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.strength .bar {
+  height: 100%;
+  width: 0%;
+  background: #adb5bd; 
+  transition: width .25s ease, background-color .25s ease;
+}
+
+.toast-box {
+  background: #198754;
+  color: #fff;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+}
