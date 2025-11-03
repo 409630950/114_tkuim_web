@@ -1,90 +1,184 @@
 body {
-  font-family: 'Baloo 2', 'Noto Sans TC', sans-serif;
-  background-color: #fff9f3;
+  font-family: 'Baloo 2', sans-serif;
   color: #333;
-  transition: background-color 0.4s, color 0.4s;
-  line-height: 1.6;
+  background-image:
+    linear-gradient(rgba(255, 230, 210, 0.85), rgba(255, 240, 225, 0.9)),
+    url("assets/貓掌.png"),
+    linear-gradient(135deg, #fff8f2, #fff3e8);
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: cover, 90px, cover;
+  background-attachment: fixed, fixed, fixed;
+  background-position: center, center, center;
 }
 
+h2.text-center {
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #3b2f2f;
+  text-shadow: 0 2px 3px rgba(255,255,255,0.9), 0 0 6px rgba(240,147,43,0.25);
+  letter-spacing: 1px;
+}
 
 .navbar {
   border-bottom: 2px solid #f2d5b0;
+  background-color: rgba(255, 253, 248, 0.9);
+  backdrop-filter: blur(8px);
 }
-.navbar-brand {
-  font-size: 1.6rem;
-  color: #f0932b !important;
-}
-#theme-toggle {
-  border-radius: 50px;
-  padding: 4px 12px;
-}
+.navbar-brand { font-size: 1.6rem; color: #f0932b !important; }
+#theme-toggle { border-radius: 50px; padding: 4px 12px; }
 
 .card {
   border-radius: 16px;
   border: none;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 .card-body {
-  background-color: #fffdf8;
+  background-color: rgba(255, 253, 248, 0.93);
   border-radius: 16px;
   padding: 1.8rem;
 }
 
+.form-label { font-weight: bold; color: #6d4c41; }
+input, select { border-radius: 10px !important; }
 
-.form-label {
-  font-weight: bold;
-  color: #6d4c41;
-}
-input, select {
-  border-radius: 10px !important;
-}
+.btn-primary { background-color: #f0932b; border: none; }
+.btn-primary:hover { background-color: #e17055; }
 
+#healthResult { font-size: 1.2rem; margin-top: 10px; }
+#weightHint   { font-size: 0.9rem; margin-top: 5px; }
 
-.btn-primary {
-  background-color: #f0932b;
-  border: none;
-}
-.btn-primary:hover {
-  background-color: #e17055;
-}
-
-#healthResult {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-#weightHint {
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
-
-
+/* ========== 夜間模式（淡暖橘、乾淨不厚重） ========== */
 body.dark-mode {
-  background-color: #2d3436;
-  color: #f1f2f6;
+  color: #f8f6f3;
+  background-image:
+    linear-gradient(rgba(18,16,15,0.58), rgba(18,16,15,0.62)),
+    url("assets/貓掌.png"),
+    linear-gradient(135deg, #2a2422, #1b1716);
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: cover, 90px, cover;
+  background-attachment: fixed, fixed, fixed;
+  background-position: center, center, center;
 }
+
 body.dark-mode .navbar {
-  background-color: #1e272e !important;
-  border-color: #485460;
+  background-color: rgba(32, 28, 26, 0.85) !important;
+  border-color: #f0b98e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
+
 body.dark-mode .card-body {
-  background-color: #3a3a3a;
-  color: #f5f6fa;
+  background-color: rgba(44, 39, 36, 0.82);
+  color: #fff4ea;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255, 190, 140, 0.16);
+  backdrop-filter: blur(4px);
 }
+
 body.dark-mode .btn-primary {
-  background-color: #ffb142;
+  background-color: #ffad66;
+  color: #2b1e16;
+  border: none;
+  box-shadow: 0 0 8px rgba(255,173,102,0.28);
 }
+body.dark-mode .btn-primary:hover { background-color: #ff9a3c; }
+
 body.dark-mode input,
 body.dark-mode select {
-  background-color: #4a4a4a;
-  color: #fff;
-  border: 1px solid #666;
+  background-color: rgba(58, 52, 49, 0.88);
+  color: #fff8f3;
+  border: 1px solid rgba(255, 190, 140, 0.35);
+}
+body.dark-mode input::placeholder,
+body.dark-mode select::placeholder { color: rgba(255, 244, 234, 0.7); }
+
+body.dark-mode h2.text-center {
+  color: #fff6ed;
+  text-shadow: 0 2px 6px rgba(255,170,110,0.35), 0 0 1px rgba(0,0,0,0.8);
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
+/* 動畫 */
+.fade-in { animation: fadeIn 0.5s ease-in-out; }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* 夜間模式：表單文字變亮一點 */
+body.dark-mode .form-label {
+  color: #ffe8c7; /* 淡橘米白 */
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: rgba(58, 52, 49, 0.9);
+  color: #fffaf2;
+  border: 1px solid rgba(255, 210, 160, 0.4);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode select::placeholder {
+  color: rgba(255, 235, 210, 0.7);
+}
+/* 夜間模式：次要按鈕（例如加入歷史紀錄） */
+body.dark-mode .btn-outline-secondary {
+  color: #ffd9b3; /* 溫柔亮橘字 */
+  border: 1px solid rgba(255, 200, 150, 0.6);
+  background-color: rgba(80, 60, 45, 0.3);
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  color: #fffaf3;
+  background-color: rgba(255, 180, 120, 0.25);
+  border-color: rgba(255, 190, 130, 0.8);
+  box-shadow: 0 0 8px rgba(255, 180, 120, 0.25);
+}
+/* 夜間模式：提示與結果文字更清晰柔亮 */
+body.dark-mode #vaccineAdviceList li,
+body.dark-mode #healthResult,
+body.dark-mode #passwordStrength,
+body.dark-mode #weightHint {
+  color: #ffeedc; /* 溫柔米橘白，亮但不刺眼 */
+  text-shadow: 0 0 3px rgba(255, 190, 130, 0.2);
+}
+
+/* 若有灰字（例如「建議結果」、「強度」）就提亮一點 */
+body.dark-mode small,
+body.dark-mode .text-muted {
+  color: #ffdeb9 !important;
+  opacity: 0.9;
+}
+
+/* 強度顏色微調：亮橘取代紅、黃、綠 */
+body.dark-mode .text-danger { color: #ffb6a3 !important; }
+body.dark-mode .text-warning { color: #ffd68f !important; }
+body.dark-mode .text-success { color: #c9ffbf !important; }
+
+
+/* 夜間模式：整合紀錄區塊提亮 */
+body.dark-mode #history-card {
+  background-color: rgba(70, 55, 45, 0.85);
+  border: 1px solid rgba(255, 200, 150, 0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.dark-mode #history-card h4 {
+  color: #ffe8c9;
+  text-shadow: 0 0 5px rgba(255, 190, 120, 0.3);
+}
+
+body.dark-mode #history-card table {
+  color: #fff4e6;
+  background-color: rgba(80, 65, 55, 0.6);
+  border-radius: 10px;
+}
+
+body.dark-mode #history-card th {
+  color: #ffd6a3;
+  border-bottom: 1px solid rgba(255, 180, 120, 0.4);
+}
+
+body.dark-mode #history-card td {
+  color: #fff2de;
+  border-top: 1px solid rgba(255, 190, 140, 0.25);
 }
