@@ -23,3 +23,6 @@ MyPet 是一個以貓咪為主題的互動生活小工具，整合了寵物健�
 5. 歷史紀錄系統：可手動儲存飼料與疫苗建議，方便回顧  
 6. 夜間模式：主題切換、顏色自動適配，減少夜間刺眼度  
 7. RWD 介面：各裝置皆能自適應顯示，介面柔和可愛
+
+## GitHub Pages 網址
+https://409630950.github.io/114_tkuim_web/114_web_midterm_project/index.html
