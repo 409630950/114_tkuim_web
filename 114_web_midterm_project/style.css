@@ -48,7 +48,7 @@ input, select { border-radius: 10px !important; }
 #healthResult { font-size: 1.2rem; margin-top: 10px; }
 #weightHint   { font-size: 0.9rem; margin-top: 5px; }
 
-/* ========== 夜間模式（淡暖橘、乾淨不厚重） ========== */
+
 body.dark-mode {
   color: #f8f6f3;
   background-image:
@@ -97,15 +97,15 @@ body.dark-mode h2.text-center {
   text-shadow: 0 2px 6px rgba(255,170,110,0.35), 0 0 1px rgba(0,0,0,0.8);
 }
 
-/* 動畫 */
+
 .fade-in { animation: fadeIn 0.5s ease-in-out; }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-/* 夜間模式：表單文字變亮一點 */
+
 body.dark-mode .form-label {
-  color: #ffe8c7; /* 淡橘米白 */
+  color: #ffe8c7; 
 }
 
 body.dark-mode input,
@@ -119,9 +119,9 @@ body.dark-mode input::placeholder,
 body.dark-mode select::placeholder {
   color: rgba(255, 235, 210, 0.7);
 }
-/* 夜間模式：次要按鈕（例如加入歷史紀錄） */
+
 body.dark-mode .btn-outline-secondary {
-  color: #ffd9b3; /* 溫柔亮橘字 */
+  color: #ffd9b3; 
   border: 1px solid rgba(255, 200, 150, 0.6);
   background-color: rgba(80, 60, 45, 0.3);
   transition: all 0.2s ease;
@@ -133,29 +133,29 @@ body.dark-mode .btn-outline-secondary:hover {
   border-color: rgba(255, 190, 130, 0.8);
   box-shadow: 0 0 8px rgba(255, 180, 120, 0.25);
 }
-/* 夜間模式：提示與結果文字更清晰柔亮 */
+
 body.dark-mode #vaccineAdviceList li,
 body.dark-mode #healthResult,
 body.dark-mode #passwordStrength,
 body.dark-mode #weightHint {
-  color: #ffeedc; /* 溫柔米橘白，亮但不刺眼 */
+  color: #ffeedc; 
   text-shadow: 0 0 3px rgba(255, 190, 130, 0.2);
 }
 
-/* 若有灰字（例如「建議結果」、「強度」）就提亮一點 */
+
 body.dark-mode small,
 body.dark-mode .text-muted {
   color: #ffdeb9 !important;
   opacity: 0.9;
 }
 
-/* 強度顏色微調：亮橘取代紅、黃、綠 */
+
 body.dark-mode .text-danger { color: #ffb6a3 !important; }
 body.dark-mode .text-warning { color: #ffd68f !important; }
 body.dark-mode .text-success { color: #c9ffbf !important; }
 
 
-/* 夜間模式：整合紀錄區塊提亮 */
+
 body.dark-mode #history-card {
   background-color: rgba(70, 55, 45, 0.85);
   border: 1px solid rgba(255, 200, 150, 0.3);
