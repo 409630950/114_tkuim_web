@@ -67,7 +67,6 @@ project-name/
 │
 └─ README.md
 
-複製程式碼
 
 ---
 
@@ -96,8 +95,6 @@ npm install
 node app.js
 成功後會顯示：
 
-arduino
-複製程式碼
 MongoDB connected
 Backend running at http://127.0.0.1:5000
 ###  4前端啟動方式
@@ -110,16 +107,10 @@ http://localhost:5173
 取得所有掛號資料
 GET /api/appointments
 新增掛號資料
-bash
-複製程式碼
 POST /api/appointments
 更新掛號資料
-bash
-複製程式碼
 PUT /api/appointments/:id
 刪除掛號資料
-bash
-複製程式碼
 DELETE /api/appointments/:id
 八、CRUD 操作流程說明
 使用者於前端輸入掛號資料
